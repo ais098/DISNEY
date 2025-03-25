@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pel·lícules Plus+</title>
     <style>
-        /* ESTIL GENERAL */
+        /* GENERAL STYLES */
         body {
             font-family: Arial, sans-serif;
-            background: url('https://via.placeholder.com/1600x900') no-repeat center center fixed;
-            background-size: cover;
+            background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
             color: white;
             margin: 0;
             padding: 0;
         }
 
-        /* CAPÇALERA */
+        /* HEADER */
         header {
             background-color: rgba(0, 0, 50, 0.9);
             padding: 15px;
@@ -28,6 +27,7 @@
             color: #f4c542;
         }
 
+        /* NAVIGATION BAR */
         nav {
             display: flex;
             justify-content: center;
@@ -39,32 +39,34 @@
             color: white;
             text-decoration: none;
             font-size: 18px;
+            font-weight: bold;
         }
 
         nav a:hover {
             color: #f4c542;
         }
 
-        /* SECCIONS DE PEL·LÍCULES */
+        /* CATEGORIES */
         .category {
-            margin: 40px;
-            text-align: center;
+            margin: 30px;
         }
 
         h2 {
             color: #f4c542;
+            text-align: center;
         }
 
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
-            padding: 20px;
+            padding: 10px;
         }
 
         .video-card {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #1c2230;
             padding: 10px;
+            text-align: center;
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -79,111 +81,130 @@
             transform: scale(1.1);
         }
 
-        /* PREGUNTES FREQÜENTS (FAQ) */
+        /* FOOTER */
+        footer {
+            background-color: rgba(0, 0, 50, 0.9);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /* FAQ SECTION */
         .faq {
-            margin: 40px auto;
             width: 80%;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
+            margin: auto;
+            text-align: left;
         }
 
         .faq h2 {
-            text-align: center;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid white;
-            padding: 10px 0;
-        }
-
-        .faq-item button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 18px;
-            width: 100%;
-            text-align: left;
             cursor: pointer;
-        }
-
-        .faq-item button:hover {
-            color: #f4c542;
+            background: #19224c;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .faq-content {
             display: none;
-            padding: 10px 0;
+            padding: 10px;
+            background: #1c2230;
+            margin-bottom: 5px;
+            border-radius: 5px;
         }
 
-        /* PEU DE PÀGINA */
-        footer {
-            background-color: rgba(0, 0, 50, 0.9);
-            padding: 15px;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
 
-    <!-- CAPÇALERA -->
+    <!-- HEADER -->
     <header>
-        <h1>Pel·lícules Plus+</h1>
         <nav>
+            <a href="#">Inici</a>
             <a href="#">Tendències</a>
             <a href="#">Pel·lícules més vistes</a>
             <a href="#">Pel·lícules per menors</a>
             <a href="#">Anime</a>
+            <a href="#">Marvel</a>
+            <a href="#">Terror</a>
+            <a href="#">Recomanats</a>
         </nav>
+        <h1>Pel·lícules Plus+</h1>
     </header>
 
-    <!-- SECCIÓ PRINCIPAL DE PEL·LÍCULES -->
+    <!-- MAIN CONTENT -->
     <main>
         <section class="category">
             <h2>Pel·lícules Populars</h2>
             <div class="video-grid">
-                <div class="video-card"><img src="https://via.placeholder.com/200x300" alt="Pel·lícula 1"></div>
-                <div class="video-card"><img src="https://via.placeholder.com/200x300" alt="Pel·lícula 2"></div>
-                <div class="video-card"><img src="https://via.placeholder.com/200x300" alt="Pel·lícula 3"></div>
-                <div class="video-card"><img src="https://via.placeholder.com/200x300" alt="Pel·lícula 4"></div>
-                <div class="video-card"><img src="https://via.placeholder.com/200x300" alt="Pel·lícula 5"></div>
-                <div class="video-card"><img src="https://via.placeholder.com/200x300" alt="Pel·lícula 6"></div>
-                <div class="video-card"><img src="https://via.placeholder.com/200x300" alt="Pel·lícula 7"></div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Pel·lícula 1">
+                    <p>Pel·lícula 1</p>
+                </div>
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Pel·lícula 2">
+                    <p>Pel·lícula 2</p>
+                </div>
             </div>
+        </section>
+
+        <section class="category">
+            <h2>Anime</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Anime 1">
+                    <p>Anime 1</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Marvel</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Marvel 1">
+                    <p>Marvel 1</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Terror</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Terror 1">
+                    <p>Terror 1</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Recomanats</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <img src="https://via.placeholder.com/200x300" alt="Recomanat 1">
+                    <p>Recomanat 1</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="faq">
+            <h2 onclick="toggleFAQ(1)">Com puc registrar-me?</h2>
+            <div id="faq1" class="faq-content">Per registrar-te, fes clic a 'Sign Up' i introdueix el teu correu.</div>
+
+            <h2 onclick="toggleFAQ(2)">Quines tarifes ofereixen?</h2>
+            <div id="faq2" class="faq-content">Tenim tarifes bàsiques i premium.</div>
         </section>
     </main>
 
-    <!-- PREGUNTES FREQÜENTS -->
-    <section class="faq">
-        <h2>Preguntes Freqüents</h2>
-        <div class="faq-item">
-            <button onclick="toggleFAQ('faq1')">Com puc veure una pel·lícula?</button>
-            <div class="faq-content" id="faq1">Pots fer clic a qualsevol pel·lícula per començar a veure-la.</div>
-        </div>
-        <div class="faq-item">
-            <button onclick="toggleFAQ('faq2')">Quant costa el servei?</button>
-            <div class="faq-content" id="faq2">Els nostres plans varien segons la qualitat i dispositius disponibles.</div>
-        </div>
-        <div class="faq-item">
-            <button onclick="toggleFAQ('faq3')">Quins dispositius són compatibles?</button>
-            <div class="faq-content" id="faq3">Pots veure pel·lícules en TV, ordinador, mòbil i tauleta.</div>
-        </div>
-    </section>
-
-    <!-- PEU DE PÀGINA -->
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Pel·lícules Plus+. Creat per Aisosa, Paula i Eloi.</p>
+        <p>&copy; 2025 Pel·lícules Plus+ | Creat per Aisosa, Paula i Eloi</p>
     </footer>
 
     <script>
-        // FUNCIONALITAT PREGUNTES FREQÜENTS
-        function toggleFAQ(id) {
-            var content = document.getElementById(id);
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
+        function toggleFAQ(num) {
+            let content = document.getElementById("faq" + num);
+            content.style.display = content.style.display === "block" ? "none" : "block";
         }
     </script>
 
