@@ -3,54 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pel·lícules Plus</title>
+    <title>Pel·lícules Plus+</title>
     <style>
-        /* GENERAL STYLES */
+        /* GENERAL */
         body {
             font-family: Arial, sans-serif;
-            background-color: #0a1931;
+            background-color: #0c0e16;
             color: white;
             margin: 0;
             padding: 0;
         }
 
-        /* SIDEBAR */
-        .sidebar {
-            width: 250px;
-            height: 100vh;
-            background: #12264b;
-            position: fixed;
-            left: 0;
+        /* FONS COLLAGE */
+        body::before {
+            content: "";
+            position: absolute;
             top: 0;
-            padding-top: 20px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/1600x900/?movies,cinema') no-repeat center center/cover;
+            opacity: 0.3;
+            z-index: -1;
         }
 
-        .sidebar a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            font-size: 18px;
-        }
-
-        .sidebar a:hover {
-            background: #1c3d6e;
-        }
-
-        /* HEADER */
+        /* CAPÇALERA */
         header {
-            margin-left: 250px;
-            background-color: #154c79;
+            background-color: #19224c;
             padding: 15px;
             text-align: center;
-            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #f4c542;
+            margin: 0;
+        }
+
+        /* MENÚ HORITZONTAL */
+        nav {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
             font-weight: bold;
         }
 
-        /* MAIN CONTENT */
-        .main-content {
-            margin-left: 250px;
-            padding: 20px;
+        nav a:hover {
+            color: #f4c542;
+        }
+
+        /* SECCIONS */
+        .category {
+            margin: 30px;
         }
 
         h2 {
@@ -60,7 +70,7 @@
 
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
             padding: 10px;
         }
@@ -70,8 +80,8 @@
             padding: 10px;
             text-align: center;
             border-radius: 10px;
-            cursor: pointer;
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .video-card img {
@@ -83,144 +93,100 @@
             transform: scale(1.1);
         }
 
-        /* FOOTER */
+        /* PREGUNTES FREQÜENTS */
+        .faq {
+            background-color: #19224c;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+
+        .faq h2 {
+            text-align: center;
+        }
+
+        .faq p {
+            margin: 10px 0;
+        }
+
+        /* PEU DE PÀGINA */
         footer {
-            margin-left: 250px;
-            background-color: #12264b;
             text-align: center;
             padding: 15px;
-            margin-top: 20px;
-        }
-
-        /* AVAILABLE DEVICES */
-        .devices {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .devices img {
-            width: 50px;
-            margin: 10px;
-        }
-
-        /* FAQ SECTION */
-        .faq {
-            margin: 20px auto;
-            width: 80%;
-            text-align: center;
-        }
-
-        .faq summary {
-            font-size: 18px;
-            cursor: pointer;
-            font-weight: bold;
-            padding: 10px;
-            background: #154c79;
-            margin: 5px 0;
-            border-radius: 5px;
-        }
-
-        .faq summary:hover {
-            background: #1c3d6e;
-        }
-
-        /* SIGN UP */
-        .signup {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .signup input {
-            padding: 10px;
-            width: 250px;
-            margin: 10px;
-        }
-
-        .signup button {
-            padding: 10px 20px;
-            background: #f4c542;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .signup button:hover {
-            background: #d9a829;
+            background-color: #101a39;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <a href="#">🔑 Iniciar Sessió</a>
-        <a href="#">🔥 Tendències</a>
-        <a href="#">🎬 Pel·lícules</a>
-        <a href="#">📺 Sèries</a>
-        <a href="#">❓ Preguntes Freqüents</a>
-    </div>
-
-    <!-- HEADER -->
+    <!-- CAPÇALERA -->
     <header>
-        🎥 Pel·lícules Plus
+        <h1>Pel·lícules Plus+</h1>
+        <nav>
+            <a href="#">Tendències</a>
+            <a href="#">Pel·lícules més vistes</a>
+            <a href="#">Pel·lícules per menors</a>
+            <a href="#">Anime</a>
+            <a href="#">Recomanades</a>
+        </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <div class="main-content">
-
-        <!-- TRENDING MOVIES -->
-        <section class="category">
-            <h2>🔥 Pel·lícules en Tendència</h2>
-            <div class="video-grid">
-                <div class="video-card">
-                    <img src="https://via.placeholder.com/200x300?text=Avatar" alt="Avatar">
-                    <p>Avatar</p>
-                </div>
-                <div class="video-card">
-                    <img src="https://via.placeholder.com/200x300?text=Inception" alt="Inception">
-                    <p>Inception</p>
-                </div>
-                <div class="video-card">
-                    <img src="https://via.placeholder.com/200x300?text=Titanic" alt="Titanic">
-                    <p>Titanic</p>
-                </div>
+    <!-- SECCIÓ PEL·LÍCULES -->
+    <section class="category">
+        <h2>Pel·lícules Populars</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Frozen" alt="Frozen">
+                <p>Frozen</p>
             </div>
-        </section>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Rei+Lleo" alt="El Rei Lleó">
+                <p>El Rei Lleó</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Encanto" alt="Encanto">
+                <p>Encanto</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Moana" alt="Moana">
+                <p>Moana</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- SIGN UP -->
-        <section class="signup">
-            <h2>📩 Sex Sign Up</h2>
-            <input type="email" placeholder="Escriu el teu correu">
-            <button>Registrar-se</button>
-        </section>
+    <section class="category">
+        <h2>Recomanades per edats</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Toy+Story" alt="Toy Story">
+                <p>Toy Story</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Up" alt="Up">
+                <p>Up</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Coco" alt="Coco">
+                <p>Coco</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- AVAILABLE DEVICES -->
-        <section class="devices">
-            <h2>📱 Available on your favourite devices</h2>
-            <img src="https://via.placeholder.com/50?text=TV" alt="TV">
-            <img src="https://via.placeholder.com/50?text=PC" alt="PC">
-            <img src="https://via.placeholder.com/50?text=Tablet" alt="Tablet">
-            <img src="https://via.placeholder.com/50?text=Mobile" alt="Mobile">
-        </section>
+    <!-- PREGUNTES FREQÜENTS -->
+    <section class="faq">
+        <h2>Preguntes Freqüents</h2>
+        <p><strong>Com puc crear un compte?</strong> Fes clic a "Sign Up" a la part superior de la pàgina.</p>
+        <p><strong>Puc veure les pel·lícules en diferents dispositius?</strong> Sí, està disponible en ordinadors, mòbils i televisors intel·ligents.</p>
+        <p><strong>Quin tipus de pel·lícules hi ha?</strong> Oferim des d’animació fins a acció, comèdia i anime.</p>
+        <p><strong>Hi ha un període de prova gratuït?</strong> Sí, oferim un període de prova de 7 dies.</p>
+        <p><strong>Què passa si tinc problemes tècnics?</strong> Contacta amb el nostre servei d’ajuda mitjançant la secció "Help".</p>
+    </section>
 
-        <!-- FAQ -->
-        <section class="faq">
-            <h2>❓ Preguntes Freqüents</h2>
-            <details>
-                <summary>Com puc subscriure'm?</summary>
-                <p>Pots subscriure't fent clic a "Sex Sign Up" i registrant el teu correu.</p>
-            </details>
-            <details>
-                <summary>Quins dispositius són compatibles?</summary>
-                <p>Pots veure les nostres pel·lícules a TV, PC, mòbil i tauleta.</p>
-            </details>
-        </section>
-    </div>
-
-    <!-- FOOTER -->
+    <!-- PEU DE PÀGINA -->
     <footer>
-        <p>© 2025 Pel·lícules Plus | Creat per Aisosa, Paula i Eloi</p>
-        <p><a href="#">Learn More</a> | <a href="#">Help</a> | <a href="#">Contacta'ns</a></p>
+        <p>© 2025 Pel·lícules Plus+ | Aisosa, Paula i Eloi</p>
+        <p><a href="#">Learn More</a> | <a href="#">Help</a> | <a href="#">Available on your favourite devices</a></p>
     </footer>
 
 </body>
