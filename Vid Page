@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomanador de Vídeos</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background: linear-gradient(to right, #1a1a1a, #333); 
+            color: white; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            height: 100vh;
+        }
+        h1 { 
+            color: #f4c542; 
+            margin-top: 20px; 
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        .video { 
+            margin: 20px 0; 
+            padding: 10px; 
+            background: rgba(51, 51, 51, 0.8); 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button { 
+            background: #f4c542; 
+            border: none; 
+            padding: 10px 20px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            border-radius: 5px; 
+            transition: background 0.3s;
+        }
+        button:hover { 
+            background: #e0b33d; 
+        }
+        footer { 
+            padding: 10px; 
+            background: #1a1a1a; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Recomanador de Vídeos</h1>
+    <p>Fes clic per descobrir un vídeo recomanat!</p>
+    <button onclick="mostrarVideo()">Recomanar un vídeo</button>
+    
+    <div class="container">
+        <div id="video-container" class="video" style="display: none;">
+            <h2 id="video-title"></h2>
+            <iframe id="video-frame" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made by Aisosa, Eloi and Paula</p>
+    </footer>
+
+    <script>
+        const videos = [
+            { title: "Frozen - Trailer Oficial", url: "https://www.youtube.com/embed/TbQm5doF_Uc" },
+            { title: "El Rei Lleó - Hakuna Matata", url: "https://www.youtube.com/embed/nbY_aP-alkw" },
+            { title: "Encant - No se'n parla de Bruno", url: "https://www.youtube.com/embed/bvWRMAU6V-c" }
+        ];
+
+        function mostrarVideo() {
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            document.getElementById("video-title").innerText = videos[randomIndex].title;
+            document.getElementById("video-frame").src = videos[randomIndex].url;
+            document.getElementById("video-container").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
