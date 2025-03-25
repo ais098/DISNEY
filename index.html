@@ -7,13 +7,14 @@
     <style>
         /* GENERAL */
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #151515;
+            font-family: Arial, sans-serif;
+            background-color: #0c0e16;
             color: white;
             margin: 0;
             padding: 0;
         }
 
+        /* FONS COLLAGE */
         body::before {
             content: "";
             position: absolute;
@@ -21,55 +22,61 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #1e1e2f, #151515);
+            background: url('https://source.unsplash.com/1600x900/?movies,cinema') no-repeat center center/cover;
+            opacity: 0.3;
             z-index: -1;
         }
 
         /* CAPÇALERA */
         header {
-            background-color: #1e1e2f;
-            padding: 20px;
+            background-color: #19224c;
+            padding: 15px;
             text-align: center;
-            border-bottom: 2px solid #f4c542;
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 36px;
             color: #f4c542;
+            margin: 0;
+        }
+
+        /* MENÚ HORITZONTAL */
+        nav {
+            margin-top: 10px;
+            text-align: center;
         }
 
         nav a {
-            color: #f4c542;
+            color: white;
             text-decoration: none;
             margin: 0 15px;
+            font-size: 18px;
             font-weight: bold;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #f4c542;
         }
 
         /* SECCIONS */
         .category {
-            margin: 20px;
-            padding: 20px;
-            background-color: #1e1e2f;
-            border-radius: 10px;
+            margin: 30px;
         }
 
         h2 {
+            text-align: center;
             color: #f4c542;
         }
 
         .video-grid {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 10px;
         }
 
         .video-card {
-            flex: 1 1 200px;
-            background-color: #333;
+            background-color: #1c2230;
             padding: 10px;
             text-align: center;
             border-radius: 10px;
@@ -77,86 +84,110 @@
             cursor: pointer;
         }
 
-        .video-card:hover {
-            transform: scale(1.05);
+        .video-card img {
+            width: 100%;
+            border-radius: 10px;
         }
 
-        /* FAQ (preguntes freqüents) desplegables */
+        .video-card:hover {
+            transform: scale(1.1);
+        }
+
+        /* PREGUNTES FREQÜENTS */
         .faq {
-            background-color: #1e1e2f;
-            margin: 20px;
+            background-color: #19224c;
             padding: 20px;
+            margin-top: 40px;
             border-radius: 10px;
         }
 
         .faq h2 {
-            color: #f4c542;
-            cursor: pointer;
-        }
-
-        .faq div {
-            margin-top: 10px;
-        }
-
-        .faq-content {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .faq h2.active + .faq-content {
-            display: block;
-        }
-
-        /* Login/Sign up & Tarifes */
-        .login-signup {
-            background-color: #1e1e2f;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .login-signup h3 {
-            color: #f4c542;
-        }
-
-        footer {
-            background-color: #1e1e2f;
-            padding: 10px;
             text-align: center;
+        }
+
+        .faq p {
+            margin: 10px 0;
+        }
+
+        /* PEU DE PÀGINA */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #101a39;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
+
     <!-- CAPÇALERA -->
     <header>
         <h1>Pel·lícules Plus+</h1>
         <nav>
             <a href="#">Tendències</a>
             <a href="#">Pel·lícules més vistes</a>
+            <a href="#">Pel·lícules per menors</a>
+            <a href="#">Anime</a>
             <a href="#">Recomanades</a>
         </nav>
     </header>
 
-    <!-- SECCIONS -->
+    <!-- SECCIÓ PEL·LÍCULES -->
     <section class="category">
         <h2>Pel·lícules Populars</h2>
         <div class="video-grid">
             <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Frozen" alt="Frozen">
                 <p>Frozen</p>
             </div>
-            <!-- Altres targetes pel·lícules -->
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Rei+Lleo" alt="El Rei Lleó">
+                <p>El Rei Lleó</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Encanto" alt="Encanto">
+                <p>Encanto</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Moana" alt="Moana">
+                <p>Moana</p>
+            </div>
         </div>
     </section>
 
-    <!-- Preguntes freqüents -->
+    <section class="category">
+        <h2>Recomanades per edats</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Toy+Story" alt="Toy Story">
+                <p>Toy Story</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Up" alt="Up">
+                <p>Up</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Coco" alt="Coco">
+                <p>Coco</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTES FREQÜENTS -->
     <section class="faq">
-        <h2 onclick="toggleFaq(this)">Preguntes Freqüents</h2>
-        <div class="faq-content">
-            <p>Pregunta aquí...</p>
-        </div>
+        <h2>Preguntes Freqüents</h2>
+        <p><strong>Com puc crear un compte?</strong> Fes clic a "Sign Up" a la part superior de la pàgina.</p>
+        <p><strong>Puc veure les pel·lícules en diferents dispositius?</strong> Sí, està disponible en ordinadors, mòbils i televisors intel·ligents.</p>
+        <p><strong>Quin tipus de pel·lícules hi ha?</strong> Oferim des d’animació fins a acció, comèdia i anime.</p>
+        <p><strong>Hi ha un període de prova gratuït?</strong> Sí, oferim un període de prova de 7 dies.</p>
+        <p><strong>Què passa si tinc problemes tècnics?</strong> Contacta amb el nostre servei d’ajuda mitjançant la secció "Help".</p>
     </section>
 
-    <!-- Login/Sign -->
-    <footer></footer>
+    <!-- PEU DE PÀGINA -->
+    <footer>
+        <p>© 2025 Pel·lícules Plus+ | Aisosa, Paula i Eloi</p>
+        <p><a href="#">Learn More</a> | <a href="#">Help</a> | <a href="#">Available on your favourite devices</a></p>
+    </footer>
+
 </body>
 </html>
