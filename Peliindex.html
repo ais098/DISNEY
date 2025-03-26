@@ -1,152 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peliculas Plus+</title>
+    <title>Pel·lícules Plus+</title>
     <style>
-        /* General Styles */
+        /* GENERAL */
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: #0c0e16;
+            color: white;
+            margin: 0;
+            padding: 0;
         }
 
+        /* HEADER */
         header {
-            background-color: #000;
-            padding: 10px 20px;
+            background-color: #19224c;
+            padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo img {
-            height: 50px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
+        .logo {
+            font-size: 28px;
             font-weight: bold;
+            color: #f4c542;
         }
 
-        .nav-links a:hover {
-            color: #e50914;
-        }
-
-        /* Banner Section */
-        .banner {
-            background: url(https://via.placeholder.com/1920x500/000000/FFFFFF) no-repeat center center/cover;
-            height: 500px;
+        .menu {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        .banner-content h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .banner-content p {
-            font-size: 24px;
-            margin-bottom: 30px;
-        }
-
-        .banner-content button {
-            background-color: #e50914;
-            color: #fff;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .banner-content button:hover {
-            background-color: #b20710;
-        }
-
-        /* Featured Content Section */
-        .featured-content {
-            padding: 50px 20px;
-        }
-
-        .featured-content h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .content-grid {
-            display: flex;
-            flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
         }
 
-        .content-item {
-            background-color: #222;
-            border: 1px solid #444;
-            border-radius: 10px;
-            overflow: hidden;
-            width: 200px;
-            text-align: center;
-        }
-
-        .content-item img {
-            width: 100%;
-            height: auto;
-        }
-
-        .content-item h3 {
-            margin: 10px 0;
+        .menu a {
+            color: white;
+            text-decoration: none;
             font-size: 18px;
         }
 
-        /* Footer */
-        footer {
-            background-color: #000;
-            padding: 20px;
-            text-align: center;
-            color: #777;
+        .menu a:hover {
+            color: #f4c542;
         }
 
-        footer p {
-            margin: 0;
+        .login {
+            background-color: #f4c542;
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* CATEGORIES */
+        .category {
+            margin: 30px;
+        }
+
+        .category h2 {
+            color: #f4c542;
+            text-align: center;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .video-card {
+            background-color: #1c2230;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .video-card:hover {
+            transform: scale(1.1);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #111;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* PREGUNTES FREQÜENTS */
+        .faq {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .faq-item {
+            background-color: #19224c;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background-color: #1c2230;
+            margin-top: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
+
+    <!-- HEADER -->
     <header>
-        <nav>
-            <div class="logo">
-                <img src="https://via.placeholder.com/150x50/000000/FFFFFF?text=Peliculas+Plus+" alt="Peliculas Plus+ Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#tv-shows">TV Shows</a></li>
-                <li><a href="#movies">Movies</a></li>
-                <li><a href="#originals">Originals</a></li>
-                <li><a href="#sports">Sports</a></li>
-                <li><a href="#profile">Profile</a></li>
-            </ul>
+        <div class="logo">Pel·lícules Plus+</div>
+        <nav class="menu">
+            <a href="#">Tendències</a>
+            <a href="#">Pel·lícules més vistes</a>
+            <a href="#">Pel·lícules per menors</a>
+            <a href="#">Anime</a>
+            <a href="#">Tarifes</a>
         </nav>
+        <a href="#" class="login">Iniciar Sessió</a>
     </header>
 
-    <!-- Banner Section -->
-    <section class="banner">
-        <div class="banner-content">
-            <h1>Welcome to Peliculas Plus+</h1>
-            <p>Your one-stop shop for all your favorite movies and TV shows.</p>
-            <button>Start Your Free Trial</button>
+    <!-- PEL·LÍCULES POPULARS -->
+    <section class="category">
+        <h2>Pel·lícules Populars</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Frozen" alt="Frozen">
+                <p>Frozen</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=Iron+Man" alt="Iron Man">
+                <p>Iron Man</p>
+            </div>
+            <div class="video-card">
+                <img src="https://via.placeholder.com/200x300?text=IT" alt="IT">
+                <p>IT</p>
+            </div>
         </div>
-    </s
+    </section>
+
+    <!-- PREGUNTES FREQÜENTS -->
+    <section class="faq">
+        <h2>Preguntes Freqüents</h2>
+        <div class="faq-item" onclick="toggleFaq(0)">Com puc subscriure'm?</div>
+        <div class="faq-answer">Pots subscriure't a través de la secció de tarifes.</div>
+
+        <div class="faq-item" onclick="toggleFaq(1)">Quins dispositius són compatibles?</div>
+        <div class="faq-answer">Pots veure Pel·lícules Plus+ a televisors, ordinadors, tauletes i mòbils.</div>
+
+        <div class="faq-item" onclick="toggleFaq(2)">Hi ha un període de prova?</div>
+        <div class="faq-answer">Sí, oferim un període de prova de 7 dies gratuït.</div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Pel·lícules Plus+ | Creat per Aisosa, Paula i Eloi</p>
+    </footer>
+
+    <script>
+        // FUNCIONALITAT PREGUNTES FREQÜENTS
+        function toggleFaq(index) {
+            var answers = document.querySelectorAll('.faq-answer');
+            answers[index].style.display = (answers[index].style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
